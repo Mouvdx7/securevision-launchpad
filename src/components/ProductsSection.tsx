@@ -84,7 +84,10 @@ const ProductsSection = () => {
                   <span className="font-display text-2xl font-bold text-foreground" style={{ fontVariantNumeric: "tabular-nums" }}>
                     {product.price}&nbsp;€
                   </span>
-                  <button className="btn-primary text-sm px-5 py-2.5">
+                  <button
+                    className="btn-primary text-sm px-5 py-2.5"
+                    onClick={() => addItem({ name: product.name, price: product.price, image: product.image })}
+                  >
                     Acheter maintenant
                   </button>
                 </div>
