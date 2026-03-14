@@ -4,6 +4,7 @@ import { useCart } from "@/contexts/CartContext";
 
 const CartPanel = () => {
   const { items, isOpen, closeCart, removeItem, updateQuantity, totalPrice } = useCart();
+  const navigate = useNavigate();
 
   return (
     <>
