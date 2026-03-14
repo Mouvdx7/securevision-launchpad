@@ -1,4 +1,5 @@
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
 
 const CartPanel = () => {
