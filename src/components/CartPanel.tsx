@@ -99,7 +99,17 @@ const CartPanel = () => {
                   {totalPrice} €
                 </span>
               </div>
-              <button className="btn-primary w-full justify-center py-3.5">
+              <button
+                className="btn-primary w-full justify-center py-3.5"
+                onClick={() => {
+                  closeCart();
+                  // Navigate to checkout for the first item
+                  if (items.length > 0) {
+                    const productId = items[0].name.toLowerCase().replace(/\s+/g, "-").replace("smartvision", "smartvision").replace("securevision", "securevision");
+                    navigate(`/commander/${productId}`);
+                  }
+                }}
+              >
                 Commander maintenant
               </button>
             </div>

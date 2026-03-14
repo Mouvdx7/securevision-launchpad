@@ -1,38 +1,12 @@
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
-import cameraMini from "@/assets/camera-mini.png";
-import cameraPro from "@/assets/camera-pro.png";
-import camera360 from "@/assets/camera-360.png";
-
-const products = [
-  {
-    name: "SmartVision Mini",
-    badge: "Nouveau",
-    description: "Caméra compacte avec vision nocturne et détection de mouvement.",
-    price: 49,
-    image: cameraMini,
-    features: ["Vision nocturne HD", "Détection de mouvement", "Connexion WiFi", "Installation rapide"],
-  },
-  {
-    name: "SecureVision Pro",
-    badge: "Pro",
-    description: "Caméra HD avec vision nocturne avancée et application mobile.",
-    price: 89,
-    image: cameraPro,
-    features: ["Vidéo HD 1080p", "Alertes instantanées", "Accès mobile", "Stockage sécurisé"],
-  },
-  {
-    name: "SecureVision 360",
-    badge: "Premium",
-    description: "Caméra rotative avec vision 360°, alerte mobile et enregistrement cloud.",
-    price: 129,
-    image: camera360,
-    features: ["Rotation 360°", "Suivi automatique", "Cloud sécurisé", "Vision nocturne avancée"],
-  },
-];
+import { products } from "@/data/products";
 
 const ProductsSection = () => {
   const { addItem } = useCart();
+  const navigate = useNavigate();
+
   return (
     <section id="produits" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -87,7 +61,10 @@ const ProductsSection = () => {
                   </span>
                   <button
                     className="btn-primary text-sm px-5 py-2.5"
-                    onClick={() => addItem({ name: product.name, price: product.price, image: product.image })}
+                    onClick={() => {
+                      addItem({ name: product.name, price: product.price, image: product.image });
+                      navigate(`/commander/${product.id}`);
+                    }}
                   >
                     Acheter maintenant
                   </button>
