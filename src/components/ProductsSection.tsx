@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 import cameraMini from "@/assets/camera-mini.png";
 import cameraPro from "@/assets/camera-pro.png";
 import camera360 from "@/assets/camera-360.png";
