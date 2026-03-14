@@ -1,6 +1,7 @@
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
+import { products } from "@/data/products";
 
 const CartPanel = () => {
   const { items, isOpen, closeCart, removeItem, updateQuantity, totalPrice } = useCart();
