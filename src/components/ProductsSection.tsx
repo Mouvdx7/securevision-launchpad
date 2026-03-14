@@ -32,6 +32,7 @@ const products = [
 ];
 
 const ProductsSection = () => {
+  const { addItem } = useCart();
   return (
     <section id="produits" className="section-padding">
       <div className="max-w-7xl mx-auto">
