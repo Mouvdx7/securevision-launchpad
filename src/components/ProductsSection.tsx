@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 import cameraMini from "@/assets/camera-mini.png";
 import cameraPro from "@/assets/camera-pro.png";
 import camera360 from "@/assets/camera-360.png";
@@ -31,6 +32,7 @@ const products = [
 ];
 
 const ProductsSection = () => {
+  const { addItem } = useCart();
   return (
     <section id="produits" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -83,7 +85,10 @@ const ProductsSection = () => {
                   <span className="font-display text-2xl font-bold text-foreground" style={{ fontVariantNumeric: "tabular-nums" }}>
                     {product.price}&nbsp;€
                   </span>
-                  <button className="btn-primary text-sm px-5 py-2.5">
+                  <button
+                    className="btn-primary text-sm px-5 py-2.5"
+                    onClick={() => addItem({ name: product.name, price: product.price, image: product.image })}
+                  >
                     Acheter maintenant
                   </button>
                 </div>

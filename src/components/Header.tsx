@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ShoppingCart, Menu, X, Shield } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
@@ -11,6 +12,7 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openCart, totalItems } = useCart();
 
   return (
     <header className="header-glass">
@@ -39,10 +41,10 @@ const Header = () => {
 
           {/* Cart + mobile toggle */}
           <div className="flex items-center gap-4">
-            <button className="relative p-2 rounded-2xl transition-colors duration-200 hover:bg-secondary">
+            <button onClick={openCart} className="relative p-2 rounded-2xl transition-colors duration-200 hover:bg-secondary">
               <ShoppingCart className="w-5 h-5 text-foreground" />
               <span className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center" style={{ fontVariantNumeric: "tabular-nums" }}>
-                0
+                {totalItems}
               </span>
             </button>
             <button
