@@ -129,6 +129,10 @@
     animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
+  .checkout-input {
+    @apply w-full px-4 py-3 rounded-2xl bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-shadow;
+  }
+
   .section-dark {
     background: hsl(var(--surface-dark));
     color: hsl(var(--surface-dark-foreground));

@@ -1,8 +1,11 @@
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
+import { products } from "@/data/products";
 
 const CartPanel = () => {
   const { items, isOpen, closeCart, removeItem, updateQuantity, totalPrice } = useCart();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -97,7 +100,17 @@ const CartPanel = () => {
                   {totalPrice} €
                 </span>
               </div>
-              <button className="btn-primary w-full justify-center py-3.5">
+              <button
+                className="btn-primary w-full justify-center py-3.5"
+                onClick={() => {
+                  closeCart();
+                  // Navigate to checkout for the first item
+                  if (items.length > 0) {
+                    const found = products.find((p) => p.name === items[0].name);
+                    navigate(`/commander/${found?.id || "smartvision-mini"}`);
+                  }
+                }}
+              >
                 Commander maintenant
               </button>
             </div>
