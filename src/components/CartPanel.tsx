@@ -106,8 +106,8 @@ const CartPanel = () => {
                   closeCart();
                   // Navigate to checkout for the first item
                   if (items.length > 0) {
-                    const productId = items[0].name.toLowerCase().replace(/\s+/g, "-").replace("smartvision", "smartvision").replace("securevision", "securevision");
-                    navigate(`/commander/${productId}`);
+                    const found = products.find((p) => p.name === items[0].name);
+                    navigate(`/commander/${found?.id || "smartvision-mini"}`);
                   }
                 }}
               >
