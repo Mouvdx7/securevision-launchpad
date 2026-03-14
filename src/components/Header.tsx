@@ -12,6 +12,7 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openCart, totalItems } = useCart();
 
   return (
     <header className="header-glass">
