@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ShoppingCart, Menu, X, Shield } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
