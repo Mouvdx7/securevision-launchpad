@@ -50,7 +50,7 @@ const orderSchema = z.object({
 
 type OrderForm = z.infer<typeof orderSchema>;
 
-const WHATSAPP_NUMBER = "33123456789"; // Replace with real number
+const WHATSAPP_NUMBER = "212674881213";
 
 const CheckoutPage = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -123,9 +123,9 @@ const CheckoutPage = () => {
       `🛒 *Nouvelle commande SecureVision*`,
       ``,
       `📦 *Produit :* ${product.name}`,
-      `💰 *Prix unitaire :* ${product.price} €`,
+      `💰 *Prix unitaire :* ${product.price} DH`,
       `🔢 *Quantité :* ${form.quantity}`,
-      `💳 *Total :* ${totalPrice} €`,
+      `💳 *Total :* ${totalPrice} DH`,
       ``,
       `👤 *Nom :* ${form.fullName}`,
       `📞 *Téléphone :* ${form.phone}`,
@@ -220,7 +220,7 @@ const CheckoutPage = () => {
                         className="font-display text-2xl font-bold text-foreground"
                         style={{ fontVariantNumeric: "tabular-nums" }}
                       >
-                        {product.price} €
+                        {product.price} DH
                       </span>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ const CheckoutPage = () => {
                       type="text"
                       value={form.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
-                      placeholder="Jean Dupont"
+                      placeholder="Mouad"
                       className="checkout-input"
                       style={{ boxShadow: "var(--card-shadow)" }}
                     />
@@ -256,7 +256,7 @@ const CheckoutPage = () => {
                         type="tel"
                         value={form.phone}
                         onChange={(e) => updateField("phone", e.target.value)}
-                        placeholder="+33 6 12 34 56 78"
+                        placeholder="+212 6 74 88 12 13"
                         className="checkout-input"
                         style={{ boxShadow: "var(--card-shadow)" }}
                       />
@@ -266,7 +266,7 @@ const CheckoutPage = () => {
                         type="email"
                         value={form.email}
                         onChange={(e) => updateField("email", e.target.value)}
-                        placeholder="jean@email.com"
+                        placeholder="mouad@gmail.com"
                         className="checkout-input"
                         style={{ boxShadow: "var(--card-shadow)" }}
                       />
@@ -279,7 +279,7 @@ const CheckoutPage = () => {
                       type="text"
                       value={form.address}
                       onChange={(e) => updateField("address", e.target.value)}
-                      placeholder="12 Rue de la Paix"
+                      placeholder="Sidi Mimoun, Medina"
                       className="checkout-input"
                       style={{ boxShadow: "var(--card-shadow)" }}
                     />
@@ -292,7 +292,7 @@ const CheckoutPage = () => {
                         type="text"
                         value={form.city}
                         onChange={(e) => updateField("city", e.target.value)}
-                        placeholder="Paris"
+                        placeholder="Marrakech"
                         className="checkout-input"
                         style={{ boxShadow: "var(--card-shadow)" }}
                       />
@@ -348,7 +348,7 @@ const CheckoutPage = () => {
                         className="font-display text-sm font-semibold text-foreground"
                         style={{ fontVariantNumeric: "tabular-nums" }}
                       >
-                        {totalPrice} €
+                        {totalPrice} DH
                       </span>
                     </div>
                     <div className="flex items-center justify-between pt-3 border-t border-border mt-3">
@@ -357,7 +357,7 @@ const CheckoutPage = () => {
                         className="font-display text-2xl font-bold text-foreground"
                         style={{ fontVariantNumeric: "tabular-nums" }}
                       >
-                        {totalPrice} €
+                        {totalPrice} DH
                       </span>
                     </div>
                   </div>

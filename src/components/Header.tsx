@@ -3,11 +3,12 @@ import { ShoppingCart, Menu, X, Shield } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Produits", href: "#produits" },
-  { label: "Fonctionnalités", href: "#fonctionnalites" },
-  { label: "Avis", href: "#avis" },
-  { label: "Contact", href: "#contact" },
+  { label: "Accueil", href: "/" },
+  { label: "Produits", href: "/produits" },
+  { label: "Notre Services", href: "/services" },
+  { label: "Fonctionnalités", href: "/#fonctionnalites" },
+  { label: "Avis", href: "/#avis" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Header = () => {

@@ -48,7 +48,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-sm opacity-40">
-          © {new Date().getFullYear()} SecureVision. Tous droits réservés.
+          <p>© {new Date().getFullYear()} SecureVision. Tous droits réservés.</p>
+          <p className="mt-2 text-xs opacity-80 italic">Projet PIE Avec prof ZAOUIA</p>
         </div>
       </div>
     </footer>

@@ -2,22 +2,40 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sophie Martin",
-    comment: "Installation très simple et qualité vidéo excellente. Je recommande vivement SecureVision pour la sécurité de votre maison.",
+    name: "Salma El Amrani",
+    comment: "L'installation sahla bzaf, w l'qualité dyal l'image wad7a w momtaza. Kansah b SecureVision l ay wa7ed baghi y7afed 3la l'aman dyal daro.",
     rating: 5,
-    initials: "SM",
+    initials: "SA",
   },
   {
-    name: "Pierre Durand",
-    comment: "Je peux surveiller ma maison depuis mon téléphone, même en voyage. L'application est intuitive et les alertes sont instantanées.",
+    name: "Youssef Mansouri",
+    comment: "Kanraqeb dari ghir b téléphone dyali 7ta w ana msafar. L'application sahla f l'utilisation, w les alertes kaywslou f wa9thom b sor3a.",
     rating: 5,
-    initials: "PD",
+    initials: "YM",
   },
   {
-    name: "Marie Lambert",
-    comment: "La vision nocturne est impressionnante. On voit aussi bien de nuit que de jour. Un investissement qui vaut chaque centime.",
+    name: "Amina Bennani",
+    comment: "La vision nocturne saraha fajatni, katban f lil b7al nhar. Had l'cameras kaysta7lo kol dirham tkhallas fihom.",
     rating: 5,
-    initials: "ML",
+    initials: "AB",
+  },
+  {
+    name: "Omar Tazi",
+    comment: "Service mzyan bzaaf, w l'installation matalbat 7ta effort kbira. Daba kan7ess b ra7a ktar 7it dari m7mya mzyan.",
+    rating: 5,
+    initials: "OT",
+  },
+  {
+    name: "Fatima-Zahra Alaoui",
+    comment: "Les notifications kayjiw direct, w hadchi 3tani i7sas b contrôle 24/7. Produit fiable w kayn lfar9 m3a cameras 3adiyin.",
+    rating: 5,
+    initials: "FA",
+  },
+  {
+    name: "Adil Benjelloun",
+    comment: "Design dyal cameras zwine w modern, w qualité dyal tswira top. Franchement investissement li kaysta7el.",
+    rating: 5,
+    initials: "AB",
   },
 ];
 
@@ -27,10 +45,10 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ce que disent nos clients
+            Chnou kigoulo l-klyane dyalna
           </h2>
           <p className="text-muted-foreground text-lg max-w-[50ch] mx-auto">
-            Ils nous font confiance pour protéger leur maison.
+            Kitiqo fina bach n-hafdo 3la l'aman dyal dyourhom.
           </p>
         </div>
 

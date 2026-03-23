@@ -59,7 +59,7 @@ const CartPanel = () => {
                         {item.name}
                       </h4>
                       <p className="text-sm text-primary font-semibold mt-0.5" style={{ fontVariantNumeric: "tabular-nums" }}>
-                        {item.price} €
+                        {item.price} DH
                       </p>
                       <div className="flex items-center gap-2 mt-2">
                         <button
@@ -97,7 +97,7 @@ const CartPanel = () => {
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-muted-foreground">Total</span>
                 <span className="font-display text-xl font-bold text-foreground" style={{ fontVariantNumeric: "tabular-nums" }}>
-                  {totalPrice} €
+                  {totalPrice} DH
                 </span>
               </div>
               <button

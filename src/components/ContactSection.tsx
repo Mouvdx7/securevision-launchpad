@@ -76,7 +76,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-1">Email</h4>
-                <p className="text-sm text-muted-foreground">contact@securevision.fr</p>
+                <p className="text-sm text-muted-foreground line-clamp-1">moadanmiraate@gmail.com</p>
+                <p className="text-sm text-muted-foreground line-clamp-1">securevision@gmail.com</p>
               </div>
             </div>
             <div className="feature-card flex items-start gap-4">
@@ -85,7 +86,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-1">Téléphone</h4>
-                <p className="text-sm text-muted-foreground">+33 1 23 45 67 89</p>
+                <p className="text-sm text-muted-foreground">+212 6 74 88 12 13</p>
               </div>
             </div>
             <div className="feature-card flex items-start gap-4">
@@ -94,7 +95,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-1">Localisation</h4>
-                <p className="text-sm text-muted-foreground">Paris, France</p>
+                <p className="text-sm text-muted-foreground">Marrackech, Morocco</p>
               </div>
             </div>
           </div>
