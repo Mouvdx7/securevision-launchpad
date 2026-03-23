@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Shield, CheckCircle2, Settings, Lightbulb, PenTool, ClipboardCheck, ArrowRight } from "lucide-react";
+import { 
+  Shield, CheckCircle2, Settings,
+  ArrowRight, Camera, 
+  Wrench, Clock, PhoneCall, CreditCard, Star,
+  BadgeCheck, MapPin
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartPanel from "@/components/CartPanel";
@@ -8,33 +13,46 @@ import { CartProvider } from "@/contexts/CartContext";
 import QuoteModal from "@/components/QuoteModal";
 
 const ServicesHero = ({ onOpenModal }: { onOpenModal: () => void }) => (
-  <section className="relative pt-16 pb-12 md:pt-20 md:pb-20 overflow-hidden">
-    {/* Gradient background matching main hero */}
+  <section className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-white">
+    {/* Subtle overlay background for light theme */}
     <div
       className="absolute inset-0 pointer-events-none"
       style={{
         background:
-          "radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.06) 0%, transparent 70%)",
+          "radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 60%)",
       }}
     />
+    <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
 
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="max-w-4xl mx-auto text-center animate-fade-up">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 justify-center">
-          <div className="status-glow" />
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-bold mb-8 justify-center shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           Solutions Professionnelles
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-[1.2] mb-6">
           Installation professionnelle de <span className="text-primary">caméras de surveillance</span>
         </h1>
-        <p className="text-xl text-muted-foreground mb-10 mx-auto max-w-lg leading-relaxed">
-          Nous proposons des solutions complètes pour sécuriser votre maison ou votre entreprise avec des caméras intelligentes et une installation rapide.
+        <p className="text-xl md:text-2xl text-slate-600 mb-10 mx-auto max-w-2xl leading-relaxed font-light">
+          Installation rapide, surveillance fiable, protection 24h/24
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <button className="btn-primary" onClick={onOpenModal}>
-            Demander un devis
-            <ArrowRight className="ml-2 w-5 h-5" />
+        <div className="flex flex-col items-center gap-6">
+          <button 
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] transition-all duration-300 hover:-translate-y-1" 
+            onClick={onOpenModal}
+          >
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative flex items-center gap-2">
+              Demander un devis
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
           </button>
+          
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-slate-600 font-medium mt-4">
+            <span className="flex items-center gap-2"><BadgeCheck className="w-4 h-4 text-primary" /> Devis gratuit</span>
+            <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-primary" /> Garantie 1 an</span>
+            <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /> Intervention à Marrakech</span>
+          </div>
         </div>
       </div>
     </div>
@@ -44,42 +62,103 @@ const ServicesHero = ({ onOpenModal }: { onOpenModal: () => void }) => (
 const ServicesGrid = () => {
   const services = [
     {
-      icon: <PenTool className="w-8 h-8 text-primary" />,
+      icon: <Camera className="w-10 h-10 text-primary mb-6" />,
       title: "Installation de caméras",
-      description: "Installation complète à domicile ou en entreprise. Positionnement stratégique des caméras pour une couverture optimale."
+      bullets: [
+        "Sans fil ou filaires (PoE)",
+        "Vision nocturne Infrarouge",
+        "Couverture optimale 360°"
+      ]
     },
     {
-      icon: <Settings className="w-8 h-8 text-primary" />,
-      title: "Configuration du système",
-      description: "Connexion au WiFi, paramétrage de l'application mobile et activation des alertes intelligentes."
+      icon: <Settings className="w-10 h-10 text-primary mb-6" />,
+      title: "Configuration système",
+      bullets: [
+        "Connexion WiFi / Réseau",
+        "Paramétrage application mobile",
+        "Alertes de détection en direct"
+      ]
     },
     {
-      icon: <ClipboardCheck className="w-8 h-8 text-primary" />,
-      title: "Maintenance et support",
-      description: "Assistance technique, réparation, suivi et mise à jour régulière du système pour votre tranquillité."
+      icon: <Wrench className="w-10 h-10 text-primary mb-6" />,
+      title: "Maintenance & SAV",
+      bullets: [
+        "Intervention rapide sur site",
+        "Mise à jour du système",
+        "Remplacement de matériel"
+      ]
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-primary" />,
-      title: "Conseil personnalisé",
-      description: "Analyse approfondie de vos besoins, recommandation des meilleures solutions et optimisation de votre sécurité."
+      icon: <Shield className="w-10 h-10 text-primary mb-6" />,
+      title: "Conseil & Sécurité",
+      bullets: [
+        "Audit de sécurité gratuit",
+        "Solutions sur-mesure",
+        "Respect normes confidentialité"
+      ]
     }
   ];
 
   return (
-    <section className="section-padding bg-secondary/30">
-      <div className="max-w-7xl mx-auto">
+    <section className="section-padding bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Nos Services d'Expertise</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">Des solutions sur mesure pour chaque besoin de sécurité.</p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-slate-900">Nos Services d'Expertise</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg">Des solutions complètes pour garantir la sécurité absolue de votre domicile ou de votre entreprise.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className={`feature-card animate-fade-up-delay-${idx + 1}`}>
-              <div className="mb-6 p-4 rounded-2xl bg-primary/5 inline-block">
+            <div 
+              key={idx} 
+              className="bg-white rounded-2xl p-8 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 animate-fade-up group cursor-pointer"
+              style={{ animationDelay: `${idx * 150}ms` }}
+            >
+              <div className="p-4 rounded-xl bg-slate-50 inline-block group-hover:bg-blue-50 transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="text-xl font-bold mb-6 text-slate-900">{service.title}</h3>
+              <ul className="space-y-3">
+                {service.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseUs = () => {
+  const advantages = [
+    { icon: <Clock className="w-7 h-7" />, title: "Installation rapide", desc: "Intervention sous 24 à 48h selon l'urgence de vos besoins." },
+    { icon: <Shield className="w-7 h-7" />, title: "Matériel haute qualité", desc: "Des caméras de dernière génération avec garantie constructeur." },
+    { icon: <PhoneCall className="w-7 h-7" />, title: "Support client réactif", desc: "Une assistance technique toujours à votre écoute 7j/7." },
+    { icon: <CreditCard className="w-7 h-7" />, title: "Prix transparents", desc: "Des devis clairs et détaillés, sans frais cachés ni surprises." }
+  ];
+
+  return (
+    <section className="section-padding bg-slate-950 text-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-fade-up">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Pourquoi choisir <span className="text-primary">SecureVision ?</span></h2>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Notre engagement : vous offrir la meilleure protection avec un service irréprochable.</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {advantages.map((adv, idx) => (
+            <div key={idx} className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8 hover:bg-slate-800/80 transition-colors duration-300">
+              <div className="w-14 h-14 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-6">
+                {adv.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">{adv.title}</h3>
+              <p className="text-slate-400 leading-relaxed">{adv.desc}</p>
             </div>
           ))}
         </div>
@@ -90,31 +169,31 @@ const ServicesGrid = () => {
 
 const ProcessSection = () => {
   const steps = [
-    { title: "Analyse des besoins", icon: <Shield className="w-6 h-6" /> },
-    { title: "Choix des caméras", icon: <Shield className="w-6 h-6" /> },
-    { title: "Installation rapide", icon: <Shield className="w-6 h-6" /> },
-    { title: "Configuration et test", icon: <Shield className="w-6 h-6" /> },
-    { title: "Suivi et support", icon: <Shield className="w-6 h-6" /> }
+    { title: "Demande de devis", desc: "Contactez-nous pour exprimer vos besoins en sécurité.", icon: "01" },
+    { title: "Analyse des besoins", desc: "Nous étudions votre espace et proposons la meilleure solution.", icon: "02" },
+    { title: "Installation", desc: "Nos experts installent et paramètrent tout le matériel.", icon: "03" },
+    { title: "Suivi & assistance", desc: "Profitez d'un support technique continu et réactif.", icon: "04" }
   ];
 
   return (
-    <section className="section-padding">
-      <div className="max-w-7xl mx-auto">
+    <section className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Notre Processus</h2>
-          <p className="text-muted-foreground">Comment nous sécurisons votre espace, étape par étape.</p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-slate-900">Comment ça marche ?</h2>
+          <p className="text-slate-600 text-lg">Un processus simple et transparent en 4 étapes.</p>
         </div>
+        
         <div className="relative">
-          {/* Horizontal Line for Desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-slate-200 z-0" />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center group animate-fade-up">
-                <div className="w-16 h-16 rounded-full bg-card border-2 border-primary flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground shadow-lg">
-                  <span className="text-lg font-bold">{idx + 1}</span>
+              <div key={idx} className="flex flex-col items-center text-center animate-fade-up group cursor-pointer" style={{ animationDelay: `${idx * 150}ms` }}>
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-50 flex items-center justify-center mb-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)] relative z-10 group-hover:bg-primary group-hover:border-primary group-hover:scale-110 group-hover:-translate-y-2 group-hover:shadow-[0_15px_40px_rgba(59,130,246,0.3)] transition-all duration-300 ease-out">
+                  <span className="text-3xl font-display font-bold text-primary group-hover:text-white transition-colors duration-300">{step.icon}</span>
                 </div>
-                <h3 className="font-bold text-lg px-4">{step.title}</h3>
+                <h3 className="font-bold text-xl mb-3 text-slate-900 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
+                <p className="text-slate-600">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -124,30 +203,72 @@ const ProcessSection = () => {
   );
 };
 
-const WhyChooseUs = () => {
-  const points = [
-    "Installation rapide",
-    "Technologie intelligente",
-    "Prix accessibles",
-    "Support client réactif",
-    "Sécurité renforcée la nuit"
+const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      name: "Ahmed B.",
+      text: "Khedma n9iya w professionnel, rekbo lya 4 dyal les caméras f villa dyali f Marrakech. Drari jaw f lwe9t w chr7o lya kolchi mzian. Kanenssa7 bihom 100%!",
+      rating: 5
+    },
+    {
+      name: "Karim M.",
+      text: "Saraha zraben w ma3ndhoumch m3a t3tal. Tlebt devis f sba7, jaw f l3chiya chafu dar. Matériel s7i7 w sora wadh7a blil w bnhar.",
+      rating: 5
+    },
+    {
+      name: "Sofia R.",
+      text: "Atmina mziana w bla zyada, w service mkhyeyer. L'application dyalhoum sahla f listi3mal, daba wlit kan7es b l'aman f dari ktar.",
+      rating: 5
+    }
   ];
 
   return (
-    <section className="section-padding bg-surface-dark text-white">
-      <div className="max-w-7xl mx-auto text-center px-4">
-        <div className="animate-fade-up max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-12">Pourquoi choisir <span className="text-primary">SecureVision ?</span></h2>
-          <div className="space-y-6 flex flex-col items-center">
-            {points.map((point, idx) => (
-              <div key={idx} className="flex items-center gap-4 group w-full max-w-md">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <CheckCircle2 className="w-5 h-4 text-primary group-hover:text-white" />
-                </div>
-                <span className="text-xl font-medium text-white/90">{point}</span>
+    <section className="section-padding bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-up">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-slate-900">Ce que disent nos clients</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, idx) => (
+            <div key={idx} className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100">
+              <div className="flex gap-1 mb-6">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                ))}
               </div>
-            ))}
-          </div>
+              <p className="text-slate-600 text-lg leading-relaxed mb-6 italic">"{testimonial.text}"</p>
+              <div className="font-bold text-slate-900">{testimonial.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const FinalCTA = ({ onOpenModal }: { onOpenModal: () => void }) => {
+  return (
+    <section className="py-24 bg-slate-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/20 blur-[100px] rounded-full pointer-events-none" />
+      
+      <div className="max-w-4xl mx-auto text-center px-4 relative z-10 animate-fade-up">
+        <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white text-balance">
+          Protégez votre maison dès aujourd’hui
+        </h2>
+        <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+          Disponible 24h/24 – Intervention rapide pour votre tranquillité d'esprit.
+        </p>
+        <div className="flex justify-center">
+          <button 
+            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-slate-900 bg-white rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+            onClick={onOpenModal}
+          >
+            <span className="relative flex items-center gap-2">
+              Demander un devis gratuit
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -156,25 +277,17 @@ const WhyChooseUs = () => {
 
 const ServicesPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         <Header />
         <ServicesHero onOpenModal={() => setIsModalOpen(true)} />
         <ServicesGrid />
-        <ProcessSection />
         <WhyChooseUs />
-        <section className="section-padding">
-          <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Protégez votre maison dès aujourd’hui</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              <button className="btn-primary px-10" onClick={() => navigate("/produits")}>Commander maintenant</button>
-              <button className="btn-secondary px-10" onClick={() => setIsModalOpen(true)}>Demander une installation</button>
-            </div>
-          </div>
-        </section>
+        <ProcessSection />
+        <TestimonialsSection />
+        <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
         <Footer />
         <CartPanel />
         <QuoteModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

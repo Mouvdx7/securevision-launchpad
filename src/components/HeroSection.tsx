@@ -13,7 +13,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto section-padding">
+      <div className="max-w-7xl mx-auto px-6 pt-4 pb-20 lg:pt-6 lg:pb-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div className="max-w-xl">
