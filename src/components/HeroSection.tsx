@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroCamera from "@/assets/hero-camera.png";
 
@@ -29,15 +30,15 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-[50ch] animate-fade-up-delay-2">
-              Solution moderne de surveillance intelligente avec vision nocturne,
+              Solution moderne de surveillance intelligente with vision nocturne,
               alertes instantanées et contrôle depuis votre smartphone.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-up-delay-3">
-              <a href="#produits" className="btn-primary gap-2">
+              <Link to="/produits" className="btn-primary gap-2">
                 Voir les produits
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
               <a href="#fonctionnalites" className="btn-secondary gap-2">
                 <Play className="w-4 h-4" />
                 Découvrir les fonctionnalités
