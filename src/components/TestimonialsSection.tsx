@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Salma El Amrani",
-    comment: "L'installation sahla bzaf, w l'qualité dyal l'image wad7a w momtaza. Kansah b SecureVision l ay wa7ed baghi y7afed 3la l'aman dyal daro.",
+    comment: "L'installation sahla bzaf, w l'qualité dyal l'image wad7a w momtaza. Kansah b Smart Surveillance l ay wa7ed baghi y7afed 3la l'aman dyal daro.",
     rating: 5,
     initials: "SA",
   },

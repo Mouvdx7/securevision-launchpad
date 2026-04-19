@@ -107,7 +107,7 @@ const CartPanel = () => {
                   // Navigate to checkout for the first item
                   if (items.length > 0) {
                     const found = products.find((p) => p.name === items[0].name);
-                    navigate(`/commander/${found?.id || "smartvision-mini"}`);
+                    navigate(`/commander/${found?.id || "smart-surveillance-mini"}`);
                   }
                 }}
               >

@@ -120,7 +120,7 @@ const CheckoutPage = () => {
 
     // Build WhatsApp message
     const message = [
-      `🛒 *Nouvelle commande SecureVision*`,
+      `🛒 *Nouvelle commande Smart Surveillance*`,
       ``,
       `📦 *Produit :* ${product.name}`,
       `💰 *Prix unitaire :* ${product.price} DH`,

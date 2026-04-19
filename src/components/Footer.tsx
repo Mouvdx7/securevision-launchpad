@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <Shield className="w-6 h-6 text-primary" />
               <span className="font-display font-bold text-lg">
-                Secure<span className="text-primary">Vision</span>
+                Smart<span className="text-primary"> Surveillance</span>
               </span>
             </div>
             <p className="text-sm opacity-60 max-w-xs leading-relaxed">
@@ -22,9 +22,9 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-sm mb-4">Produits</h4>
             <ul className="space-y-2 text-sm opacity-60">
-              <li><a href="#produits" className="hover:opacity-100 transition-opacity">SmartVision Mini</a></li>
-              <li><a href="#produits" className="hover:opacity-100 transition-opacity">SecureVision Pro</a></li>
-              <li><a href="#produits" className="hover:opacity-100 transition-opacity">SecureVision 360</a></li>
+              <li><a href="#produits" className="hover:opacity-100 transition-opacity">Smart Surveillance Mini</a></li>
+              <li><a href="#produits" className="hover:opacity-100 transition-opacity">Smart Surveillance Pro</a></li>
+              <li><a href="#produits" className="hover:opacity-100 transition-opacity">Smart Surveillance 360</a></li>
             </ul>
           </div>
           <div>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-sm opacity-40">
-          <p>© {new Date().getFullYear()} SecureVision. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Smart Surveillance. Tous droits réservés.</p>
           <p className="mt-2 text-xs opacity-80 italic">Projet PIE Avec prof ZAOUIA</p>
         </div>
       </div>

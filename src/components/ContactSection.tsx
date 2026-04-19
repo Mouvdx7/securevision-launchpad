@@ -77,7 +77,7 @@ const ContactSection = () => {
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-1">Email</h4>
                 <p className="text-sm text-muted-foreground line-clamp-1">moadanmiraate@gmail.com</p>
-                <p className="text-sm text-muted-foreground line-clamp-1">securevision@gmail.com</p>
+                <p className="text-sm text-muted-foreground line-clamp-1">smartsurveillance@gmail.com</p>
               </div>
             </div>
             <div className="feature-card flex items-start gap-4">

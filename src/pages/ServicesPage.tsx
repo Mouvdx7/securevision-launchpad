@@ -147,7 +147,7 @@ const WhyChooseUs = () => {
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Pourquoi choisir <span className="text-primary">SecureVision ?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Pourquoi choisir <span className="text-primary">Smart Surveillance ?</span></h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">Notre engagement : vous offrir la meilleure protection avec un service irréprochable.</p>
         </div>
         

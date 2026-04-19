@@ -56,7 +56,7 @@ const HeroSection = () => {
             />
             <img
               src={heroCamera}
-              alt="Caméra de surveillance SecureVision"
+              alt="Caméra de surveillance Smart Surveillance"
               className="relative z-10 w-full max-w-md drop-shadow-2xl"
             />
           </div>

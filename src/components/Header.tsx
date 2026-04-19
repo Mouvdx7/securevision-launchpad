@@ -23,7 +23,7 @@ const Header = () => {
           <a href="#accueil" className="flex items-center gap-2">
             <Shield className="w-7 h-7 text-primary" />
             <span className="font-display font-bold text-xl text-foreground">
-              Secure<span className="text-primary">Vision</span>
+              Smart<span className="text-primary"> Surveillance</span>
             </span>
           </a>
 

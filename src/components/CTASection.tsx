@@ -14,7 +14,7 @@ const CTASection = () => {
           Protégez ce qui compte le plus
         </h2>
         <p className="text-lg opacity-70 mb-8 max-w-[45ch] mx-auto">
-          Rejoignez des milliers de foyers qui font confiance à SecureVision pour leur sécurité au quotidien.
+          Rejoignez des milliers de foyers qui font confiance à Smart Surveillance pour leur sécurité au quotidien.
         </p>
         <a href="#contact" className="btn-primary text-base px-8 py-4 gap-2">
           Commander maintenant

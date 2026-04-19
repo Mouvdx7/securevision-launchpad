@@ -28,14 +28,14 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "smartvision-mini",
-    name: "SmartVision Mini",
+    id: "smart-surveillance-mini",
+    name: "Smart Surveillance Mini",
     badge: "Nouveau",
     description: "Caméra compacte avec vision nocturne et détection de mouvement.",
     price: 490,
     image: cameraMini,
     features: ["Vision nocturne HD", "Détection de mouvement", "Connexion WiFi", "Installation rapide"],
-    longDescription: "La SmartVision Mini est la solution idéale pour surveiller discrètement votre intérieur. Malgré sa taille réduite, elle embarque une technologie de pointe permettant une vision claire même dans l'obscurité totale et une détection de mouvement intelligente.",
+    longDescription: "La Smart Surveillance Mini est la solution idéale pour surveiller discrètement votre intérieur. Malgré sa taille réduite, elle embarque une technologie de pointe permettant une vision claire même dans l'obscurité totale et une détection de mouvement intelligente.",
     technicalSpecs: {
       "Résolution": "1080p Full HD",
       "Angle de vue": "110°",
@@ -45,14 +45,14 @@ export const products: Product[] = [
     }
   },
   {
-    id: "securevision-pro",
-    name: "SecureVision Pro",
+    id: "smart-surveillance-pro",
+    name: "Smart Surveillance Pro",
     badge: "Pro",
     description: "Caméra HD avec vision nocturne avancée et application mobile.",
     price: 890,
     image: cameraPro,
     features: ["Vidéo HD 1080p", "Alertes instantanées", "Accès mobile", "Stockage sécurisé"],
-    longDescription: "Conçue pour les professionnels et les particuliers exigeants, la SecureVision Pro offre une fiabilité inégalée. Son boîtier robuste et son processeur d'image haute performance garantissent une surveillance sans faille 24h/24.",
+    longDescription: "Conçue pour les professionnels et les particuliers exigeants, la Smart Surveillance Pro offre une fiabilité inégalée. Son boîtier robuste et son processeur d'image haute performance garantissent une surveillance sans faille 24h/24.",
     technicalSpecs: {
       "Résolution": "1080p (1920x1080)",
       "Processeur": "Ambarella High-Speed",
@@ -62,14 +62,14 @@ export const products: Product[] = [
     }
   },
   {
-    id: "securevision-360",
-    name: "SecureVision 360",
+    id: "smart-surveillance-360",
+    name: "Smart Surveillance 360",
     badge: "Premium",
     description: "Caméra rotative avec vision 360°, alerte mobile et enregistrement cloud.",
     price: 1290,
     image: camera360,
     features: ["Rotation 360°", "Suivi automatique", "Cloud sécurisé", "Vision nocturne avancée"],
-    longDescription: "Ne laissez aucun angle mort avec la SecureVision 360. Grâce à sa tête rotative motorisée, elle suit automatiquement les mouvements suspects et vous permet de balayer toute la pièce directement depuis votre smartphone.",
+    longDescription: "Ne laissez aucun angle mort avec la Smart Surveillance 360. Grâce à sa tête rotative motorisée, elle suit automatiquement les mouvements suspects et vous permet de balayer toute la pièce directement depuis votre smartphone.",
     technicalSpecs: {
       "Rotation H/V": "355° Horizontal / 90° Vertical",
       "IA": "Suivi de forme humaine intelligent",
@@ -79,14 +79,14 @@ export const products: Product[] = [
     }
   },
   {
-    id: "securevision-exterieur",
-    name: "SecureVision Extérieur",
+    id: "smart-surveillance-exterieur",
+    name: "Smart Surveillance Extérieur",
     badge: "Solaire",
     description: "Caméra extérieure sur batterie solaire, résistante aux intempéries avec qualité 4K.",
     price: 1590,
     image: outdoorSolar,
     features: ["Énergie Solaire", "Étanchéité IP67", "Qualité 4K Ultra HD", "Détection IA"],
-    longDescription: "La liberté totale de surveillance. La SecureVision Extérieur fonctionne entièrement à l'énergie solaire, éliminant le besoin de câbles. Sa résolution 4K et sa résistance extrême aux intempéries en font le gardien parfait pour votre villa ou jardin.",
+    longDescription: "La liberté totale de surveillance. La Smart Surveillance Extérieur fonctionne entièrement à l'énergie solaire, éliminant le besoin de câbles. Sa résolution 4K et sa résistance extrême aux intempéries en font le gardien parfait pour votre villa ou jardin.",
     technicalSpecs: {
       "Énergie": "Panneau solaire intégré + Batterie 15000mAh",
       "Résolution": "4K Ultra HD",
@@ -96,14 +96,14 @@ export const products: Product[] = [
     }
   },
   {
-    id: "smartvision-doorbell",
-    name: "SmartVision Doorbell",
+    id: "smart-surveillance-doorbell",
+    name: "Smart Surveillance Doorbell",
     badge: "Populaire",
     description: "Sonnette vidéo intelligente avec audio bidirectionnel et alertes sur téléphone.",
     price: 790,
     image: smartDoorbell,
     features: ["Audio bidirectionnel", "Grand angle 160°", "Réponse rapide", "Vision nocturne"],
-    longDescription: "Sachez qui est à votre porte avant même qu'on ne sonne. La SmartVision Doorbell combine une sonnette haute performance avec une caméra de sécurité intelligente. Parlez directement avec vos visiteurs depuis votre canapé ou depuis l'autre bout du monde.",
+    longDescription: "Sachez qui est à votre porte avant même qu'on ne sonne. La Smart Surveillance Doorbell combine une sonnette haute performance avec une caméra de sécurité intelligente. Parlez directement avec vos visiteurs depuis votre canapé ou depuis l'autre bout du monde.",
     technicalSpecs: {
       "Champ de vision": "160° Diagonal",
       "Audio": "Full Duplex bidirectionnel",
@@ -113,14 +113,14 @@ export const products: Product[] = [
     }
   },
   {
-    id: "securevision-dual",
-    name: "SecureVision Dual-Lens",
+    id: "smart-surveillance-dual",
+    name: "Smart Surveillance Dual-Lens",
     badge: "Nouveau",
     description: "Double objectif pour une vision large et un zoom précis simultanés.",
     price: 1890,
     image: heroCamera,
     features: ["Double Capteur 4K", "Zoom Hybride 10x", "Détection Humaine IA", "IP66 Étanche"],
-    longDescription: "La SecureVision Dual-Lens révolutionne la surveillance extérieure. Ses deux objectifs travaillent en tandem : l'un capture une vue panoramique large tandis que l'autre zoome automatiquement sur les détails importants comme les visages ou les plaques minéralogiques.",
+    longDescription: "La Smart Surveillance Dual-Lens révolutionne la surveillance extérieure. Ses deux objectifs travaillent en tandem : l'un capture une vue panoramique large tandis que l'autre zoome automatiquement sur les détails importants comme les visages ou les plaques minéralogiques.",
     technicalSpecs: {
       "Capteurs": "Double Capteur CMOS Sony 4K",
       "Zoom": "Hybride 10x (Optique + IA)",
@@ -130,17 +130,17 @@ export const products: Product[] = [
     }
   },
   {
-    id: "smartvision-lock",
-    name: "SmartVision DoorLock",
+    id: "smart-surveillance-lock",
+    name: "Smart Surveillance DoorLock",
     badge: "Sécurité",
-    description: "Serrure connectée avec empreinte digitale et contrôle à distance.",
+    description: "Serrure connectée with empreinte digitale et contrôle à distance.",
     price: 1290,
     image: imgNew1,
     features: ["Empreinte Biométrique", "Code Temporaire", "App Mobile", "Clé de secours"],
   },
   {
-    id: "securevision-hub",
-    name: "SecureVision Hub Pro",
+    id: "smart-surveillance-hub",
+    name: "Smart Surveillance Hub Pro",
     badge: "Pack",
     description: "Centrale de contrôle intelligente pour tous vos appareils de sécurité.",
     price: 2490,
@@ -148,8 +148,8 @@ export const products: Product[] = [
     features: ["Ecran Tactile 7\"", "Batterie de secours", "Sirène 110dB", "Zigbee/Z-Wave"],
   },
   {
-    id: "smartvision-cloud",
-    name: "SmartVision CloudCam",
+    id: "smart-surveillance-cloud",
+    name: "Smart Surveillance CloudCam",
     badge: "Populaire",
     description: "Stockage cloud illimité pour ne jamais rien rater, où que vous soyez.",
     price: 790,
@@ -157,8 +157,8 @@ export const products: Product[] = [
     features: ["Cloud Gratuit 24h", "Full HD 1080p", "Vision Nocturne", "Petite & Discrète"],
   },
   {
-    id: "securevision-stealth",
-    name: "SecureVision Stealth",
+    id: "smart-surveillance-stealth",
+    name: "Smart Surveillance Stealth",
     badge: "Discret",
     description: "La caméra la plus petite au monde pour une surveillance invisible.",
     price: 690,
@@ -166,8 +166,8 @@ export const products: Product[] = [
     features: ["Taille d'une pièce", "Autonomie 4h", "Enregistrement SD", "Micro Intégré"],
   },
   {
-    id: "smartvision-pet",
-    name: "SmartVision Pet",
+    id: "smart-surveillance-pet",
+    name: "Smart Surveillance Pet",
     badge: "Nouveau",
     description: "Gardez le contact avec vos animaux et jouez avec eux à distance.",
     price: 890,
@@ -175,8 +175,8 @@ export const products: Product[] = [
     features: ["Distributeur friandises", "Laser Interactif", "Audio Bidirectionnel", "Détection d'Aboyement"],
   },
   {
-    id: "securevision-garden",
-    name: "SecureVision Garden",
+    id: "smart-surveillance-garden",
+    name: "Smart Surveillance Garden",
     badge: "Solaire",
     description: "Éclairage de jardin et surveillance combinés, 100% autonome.",
     price: 1490,
@@ -184,8 +184,8 @@ export const products: Product[] = [
     features: ["Panneau Solaire", "Lumière LED RGB", "Capteur de Mouvement", "Résistant au Gel"],
   },
   {
-    id: "smartvision-garage",
-    name: "SmartVision Garage",
+    id: "smart-surveillance-garage",
+    name: "Smart Surveillance Garage",
     badge: "Sécurité",
     description: "Surveillez votre garage et recevez une alerte si la porte reste ouverte.",
     price: 990,
@@ -193,8 +193,8 @@ export const products: Product[] = [
     features: ["Contrôle Porte Garage", "Grand Angle 160°", "Détection Véhicule", "Sirène"],
   },
   {
-    id: "securevision-office",
-    name: "SecureVision Office 360",
+    id: "smart-surveillance-office",
+    name: "Smart Surveillance Office 360",
     badge: "Pro",
     description: "Surveillance panoramique pour bureaux et locaux commerciaux.",
     price: 1590,
@@ -202,8 +202,8 @@ export const products: Product[] = [
     features: ["Vue Fisheye 180°", "Comptage de personnes", "PoE Support", "Anti-Vandale"],
   },
   {
-    id: "smartvision-travel",
-    name: "SmartVision Travel",
+    id: "smart-surveillance-travel",
+    name: "Smart Surveillance Travel",
     badge: "Populaire",
     description: "La caméra de voyage compacte pour sécuriser votre chambre d'hôtel.",
     price: 590,
