@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import CartPanel from "@/components/CartPanel";
 import { CartProvider } from "@/contexts/CartContext";
 import QuoteModal from "@/components/QuoteModal";
+import mouadFounder from "@/assets/mouad-founder.png";
 
 const ServicesHero = ({ onOpenModal }: { onOpenModal: () => void }) => (
   <section className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-white">
@@ -218,7 +219,7 @@ const FounderProfile = () => {
             <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-amber-500/30 p-1 bg-slate-800">
               <div className="w-full h-full rounded-full overflow-hidden bg-slate-700">
                 <img 
-                  src="/src/assets/image copy 9.png" 
+                  src={mouadFounder} 
                   alt="Mouad Anmirate" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
