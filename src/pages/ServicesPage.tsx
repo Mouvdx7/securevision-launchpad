@@ -203,6 +203,56 @@ const ProcessSection = () => {
   );
 };
 
+const FounderProfile = () => {
+  return (
+    <section className="py-24 bg-slate-900 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_70%)] pointer-events-none" />
+      
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
+        <div className="flex flex-col items-center text-center animate-fade-up">
+          <div className="relative group cursor-pointer mb-8">
+            {/* Outer Glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+            
+            {/* Circular Image Container */}
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-amber-500/30 p-1 bg-slate-800">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-700">
+                <img 
+                  src="/src/assets/mouad-profile.jpg" 
+                  alt="Mouad Anmirate" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://ui-avatars.com/api/?name=Mouad+Anmirate&background=f59e0b&color=fff&size=512";
+                  }}
+                />
+              </div>
+            </div>
+            
+            {/* Minimal Badge */}
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-900 px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg shadow-amber-500/20">
+              Verified
+            </div>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-2 tracking-tight">
+            Mouad <span className="text-amber-500">Anmirate</span>
+          </h2>
+          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-sm mb-6">
+            Fondateur de projet
+          </p>
+          
+          <div className="w-20 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-8 opacity-50" />
+          
+          <p className="text-slate-400 text-lg max-w-2xl leading-relaxed italic">
+            "Notre mission est de rendre la sécurité intelligente accessible à tous les foyers marocains, avec une excellence technique et un service de proximité."
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const TestimonialsSection = () => {
   const testimonials = [
     {
@@ -287,6 +337,7 @@ const ServicesPage = () => {
         <WhyChooseUs />
         <ProcessSection />
         <TestimonialsSection />
+        <FounderProfile />
         <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
         <Footer />
         <CartPanel />
