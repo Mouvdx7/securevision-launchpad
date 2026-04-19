@@ -205,17 +205,17 @@ const ProcessSection = () => {
 
 const FounderProfile = () => {
   return (
-    <section className="py-12 md:py-16 bg-slate-900 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_70%)] pointer-events-none" />
       
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center animate-fade-up">
-          <div className="relative group cursor-pointer mb-6">
+          <div className="relative group cursor-pointer mb-4">
             {/* Outer Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
             
             {/* Circular Image Container */}
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-amber-500/30 p-1 bg-slate-800">
+            <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-amber-500/30 p-1 bg-slate-800">
               <div className="w-full h-full rounded-full overflow-hidden bg-slate-700">
                 <img 
                   src="/src/assets/image copy 9.png" 
@@ -235,16 +235,16 @@ const FounderProfile = () => {
             </div>
           </div>
 
-          <h2 className="text-2xl md:text-4xl font-display font-bold text-white mb-1 tracking-tight">
+          <h2 className="text-xl md:text-3xl font-display font-bold text-white mb-1 tracking-tight">
             Mouad <span className="text-amber-500">Anmirate</span>
           </h2>
-          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-sm mb-6">
+          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4">
             Fondateur de projet
           </p>
           
-          <div className="w-20 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-8 opacity-50" />
+          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-6 opacity-50" />
           
-          <p className="text-slate-400 text-lg max-w-2xl leading-relaxed italic">
+          <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed italic">
             "Notre mission est de rendre la sécurité intelligente accessible à tous les foyers marocains, avec une excellence technique et un service de proximité."
           </p>
         </div>
