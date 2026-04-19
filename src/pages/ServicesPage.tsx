@@ -337,8 +337,8 @@ const ServicesPage = () => {
         <WhyChooseUs />
         <ProcessSection />
         <TestimonialsSection />
-        <FounderProfile />
         <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
+        <FounderProfile />
         <Footer />
         <CartPanel />
         <QuoteModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
