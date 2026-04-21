@@ -246,14 +246,8 @@ const TeamSection = () => {
           <h2 className="text-xl md:text-3xl font-display font-bold text-white mb-1 tracking-tight">
             Mouad <span className="text-amber-500">Anmirate</span>
           </h2>
-          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4">
+          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs mb-16">
             Fondateur de projet
-          </p>
-          
-          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-6 opacity-50" />
-          
-          <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed italic mb-16">
-            "Notre mission est de rendre la sécurité intelligente accessible à tous les foyers marocains, avec une excellence technique et un service de proximité."
           </p>
 
           {/* Team Grid */}
