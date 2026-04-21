@@ -243,10 +243,10 @@ const TeamSection = () => {
             </div>
           </div>
 
-          <h2 className="text-xl md:text-3xl font-display font-bold text-white mb-1 tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-display font-bold text-white mb-2 tracking-tight">
             Mouad <span className="text-amber-500">Anmirate</span>
           </h2>
-          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs mb-16">
+          <p className="text-amber-500/80 font-medium tracking-[0.2em] uppercase text-xs md:text-sm mb-16">
             Fondateur de projet
           </p>
 
@@ -275,10 +275,10 @@ const TeamSection = () => {
                   </div>
                 </div>
 
-                <h3 className="text-sm md:text-base font-bold text-white mb-1 group-hover:text-amber-500 transition-colors">
+                <h3 className="text-base md:text-xl font-bold text-white mb-1 group-hover:text-amber-500 transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-amber-500/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium">
+                <p className="text-amber-500/60 text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium">
                   {member.role}
                 </p>
               </div>
