@@ -253,21 +253,32 @@ const TeamSection = () => {
           {/* Team Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-5xl">
             {teamMembers.map((member, idx) => (
-              <div key={idx} className="group cursor-pointer animate-fade-up" style={{ animationDelay: `${(idx + 1) * 150}ms` }}>
-                <div className="relative mb-4 mx-auto w-20 h-20 md:w-24 md:h-24">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-orange-600/20 rounded-full blur group-hover:opacity-100 transition duration-500 opacity-0" />
-                  <div className="relative w-full h-full rounded-full overflow-hidden border border-slate-700 bg-slate-800 p-0.5">
-                    <img 
-                      src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f59e0b&color=1e293b&size=256`}
-                      alt={member.name}
-                      className="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
-                    />
+              <div key={idx} className="flex flex-col items-center group animate-fade-up" style={{ animationDelay: `${(idx + 1) * 150}ms` }}>
+                <div className="relative cursor-pointer mb-4">
+                  {/* Outer Glow */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full blur opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                  
+                  {/* Circular Image Container */}
+                  <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-amber-500/20 p-1 bg-slate-800 transition-colors duration-300 group-hover:border-amber-500/50">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-slate-700">
+                      <img 
+                        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f59e0b&color=1e293b&size=256`}
+                        alt={member.name}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Minimal Badge */}
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-900 px-2 py-0.5 rounded-full text-[8px] font-bold tracking-widest uppercase shadow-lg shadow-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Verified
                   </div>
                 </div>
+
                 <h3 className="text-sm md:text-base font-bold text-white mb-1 group-hover:text-amber-500 transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-slate-500 text-[10px] md:text-xs uppercase tracking-wider">
+                <p className="text-amber-500/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium">
                   {member.role}
                 </p>
               </div>
