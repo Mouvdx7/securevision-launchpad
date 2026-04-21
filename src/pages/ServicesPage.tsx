@@ -207,7 +207,7 @@ const ProcessSection = () => {
 const TeamSection = () => {
   const teamMembers = [
     { name: "Hiba Ajal", role: "Responsable marketing" },
-    { name: "Amin Bouzkraoui", role: "Responsable technique" },
+    { name: "Amine bouzekraoui", role: "Responsable technique" },
     { name: "Hajar Laftani", role: "Responsable design" },
     { name: "Fatima Foussi", role: "Responsable communication" },
   ];
