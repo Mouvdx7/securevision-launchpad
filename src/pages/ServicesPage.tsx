@@ -204,12 +204,19 @@ const ProcessSection = () => {
   );
 };
 
-const FounderProfile = () => {
+const TeamSection = () => {
+  const teamMembers = [
+    { name: "Hiba Ajal", role: "Responsable marketing" },
+    { name: "Amin Bouzkraoui", role: "Responsable technique" },
+    { name: "Hajar Laftani", role: "Responsable design" },
+    { name: "Fatima Foussi", role: "Responsable communication" },
+  ];
+
   return (
-    <section className="py-8 md:py-10 bg-slate-900 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-900 relative overflow-hidden border-t border-slate-800">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_70%)] pointer-events-none" />
       
-      <div className="max-w-4xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center animate-fade-up">
           <div className="relative group cursor-pointer mb-4">
             {/* Outer Glow */}
@@ -245,9 +252,33 @@ const FounderProfile = () => {
           
           <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-6 opacity-50" />
           
-          <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed italic">
+          <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed italic mb-16">
             "Notre mission est de rendre la sécurité intelligente accessible à tous les foyers marocains, avec une excellence technique et un service de proximité."
           </p>
+
+          {/* Team Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-5xl">
+            {teamMembers.map((member, idx) => (
+              <div key={idx} className="group cursor-pointer animate-fade-up" style={{ animationDelay: `${(idx + 1) * 150}ms` }}>
+                <div className="relative mb-4 mx-auto w-20 h-20 md:w-24 md:h-24">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-orange-600/20 rounded-full blur group-hover:opacity-100 transition duration-500 opacity-0" />
+                  <div className="relative w-full h-full rounded-full overflow-hidden border border-slate-700 bg-slate-800 p-0.5">
+                    <img 
+                      src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f59e0b&color=1e293b&size=256`}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </div>
+                <h3 className="text-sm md:text-base font-bold text-white mb-1 group-hover:text-amber-500 transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-slate-500 text-[10px] md:text-xs uppercase tracking-wider">
+                  {member.role}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -339,7 +370,7 @@ const ServicesPage = () => {
         <ProcessSection />
         <TestimonialsSection />
         <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
-        <FounderProfile />
+        <TeamSection />
         <Footer />
         <CartPanel />
         <QuoteModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
